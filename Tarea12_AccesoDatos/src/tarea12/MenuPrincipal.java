@@ -36,15 +36,12 @@ public class MenuPrincipal {
                     metodo.eliminarAlumnoConPK();
                     break;
                 case 8:
-                    metodo.mostrarGrupos();
-                    break;
-                case 9:
                     metodo.eliminarAlumnosDelGrupo();
                     break;
-                case 10:
+                case 9:
                     metodo.guardarGruposEnXML();
                     break;
-                case 11:
+                case 10:
                     metodo.leerXmlInsertarBD();
                     break;
                 case 0:
@@ -65,10 +62,9 @@ public class MenuPrincipal {
         System.out.println("5. Leer archivo TXT y guardar en BD");
         System.out.println("6. Modificar Nombre de Alumno por PK");
         System.out.println("7. Eliminar Alumno por PK");
-        System.out.println("8. Mostrar Grupos");
-        System.out.println("9. Eliminar Alumnos de un Grupo");
-        System.out.println("10. Guardar Grupos en archivo XML");
-        System.out.println("11. Leer archivo XML e Insertar en BD");
+        System.out.println("8. Eliminar Alumnos de un Grupo");
+        System.out.println("9. Guardar Grupos en archivo XML");
+        System.out.println("10. Leer archivo XML e Insertar en BD");
         System.out.println("0. Salir");
         System.out.print("Elige una opción: ");
         System.out.println();
