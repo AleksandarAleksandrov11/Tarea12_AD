@@ -1,0 +1,19 @@
+<Grupos>
+    <grupo>
+        <id_grupo>4</id_grupo>
+        <nombre_grupo>Alpha</nombre_grupo>
+        <alumno NIA="12" apellidos="López" ciclo="DAW" curso="1" fecha_nacimiento="2001-03-12" genero="H" id_grupo="10" nombre="Juan"/>
+        <alumno NIA="13" apellidos="Fernández" ciclo="DAW" curso="1" fecha_nacimiento="2000-11-22" genero="M" id_grupo="4" nombre="Ana"/>
+    </grupo>
+    <grupo>
+        <id_grupo>5</id_grupo>
+        <nombre_grupo>Beta</nombre_grupo>
+        <alumno NIA="21" apellidos="Ramírez" ciclo="ASIR" curso="2" fecha_nacimiento="1999-05-10" genero="M" id_grupo="5" nombre="Lucía"/>
+    </grupo>
+    <grupo>
+        <id_grupo>6</id_grupo>
+        <nombre_grupo>Gamma</nombre_grupo>
+        <alumno NIA="31" apellidos="Gómez" ciclo="DAM" curso="2" fecha_nacimiento="2002-07-18" genero="H" id_grupo="6" nombre="Pedro"/>
+        <alumno NIA="32" apellidos="Ruiz" ciclo="DAM" curso="2" fecha_nacimiento="2003-09-24" genero="M" id_grupo="6" nombre="Clara"/>
+    </grupo>
+</Grupos>

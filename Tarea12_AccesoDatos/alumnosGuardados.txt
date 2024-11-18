@@ -1,0 +1,4 @@
+1, Paco, Marciano, H, 2000-12-15, DAM, 2, 2, B
+2, Maria, Curie, M, 2000-12-01, ASIR, 1, 1, A
+3, Marcos, Garcia, H, 2003-07-16, ASIR, 2, 3, C
+4, Carlos, Martinez, H, 1998-02-16, DAM, 2, 1, A
