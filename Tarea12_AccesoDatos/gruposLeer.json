@@ -1,0 +1,55 @@
+[
+    {
+      "id_grupo": 84,
+      "nombre_grupo": "Omega",
+      "alumnos": [
+        {
+          "nia": 5,
+          "nombre": "Sofía",
+          "apellidos": "López",
+          "genero": "M",
+          "fNacimiento": "2001-06-12",
+          "ciclo": "DAM",
+          "curso": "1",
+          "grupo": 1
+        },
+        {
+          "nia": 8,
+          "nombre": "Andrés",
+          "apellidos": "Hernández",
+          "genero": "H",
+          "fNacimiento": "1999-10-23",
+          "ciclo": "ASIR",
+          "curso": "2",
+          "grupo": 1
+        }
+      ]
+    },
+    {
+      "id_grupo": 57,
+      "nombre_grupo": "Zeta",
+      "alumnos": [
+        {
+          "nia": 15,
+          "nombre": "Elena",
+          "apellidos": "Martínez",
+          "genero": "M",
+          "fNacimiento": "2000-01-08",
+          "ciclo": "DAW",
+          "curso": "1",
+          "grupo": 2
+        },
+        {
+          "nia": 16,
+          "nombre": "Luis",
+          "apellidos": "García",
+          "genero": "H",
+          "fNacimiento": "2002-05-19",
+          "ciclo": "ASIR",
+          "curso": "2",
+          "grupo": 2
+        }
+      ]
+    }
+  ]
+  
