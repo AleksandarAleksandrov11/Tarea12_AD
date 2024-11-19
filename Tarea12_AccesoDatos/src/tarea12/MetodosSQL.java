@@ -610,11 +610,7 @@ public class MetodosSQL {
 					String nombre = alumnoInsertar.get("nombre").getAsString();
 					String apellidos = alumnoInsertar.get("apellidos").getAsString();
 					char genero = alumnoInsertar.get("genero").getAsString().charAt(0);
-					
-//				    String fechaNacimientoStr = alumnoInsertar.get("fNacimiento").getAsString();
-//				    SimpleDateFormat formatoFecha = new SimpleDateFormat("yyyy-MM-dd");
-//				    java.util.Date fechaNacimiento = formatoFecha.parse(fechaNacimientoStr);
-				    
+					String fecha = alumnoInsertar.get("fNacimiento").getAsString();
 					String ciclo = alumnoInsertar.get("ciclo").getAsString();
 					String curso = alumnoInsertar.get("curso").getAsString();
 					int grupo = alumnoInsertar.get("grupo").getAsInt();
@@ -623,20 +619,15 @@ public class MetodosSQL {
 					
 					String sqlAlumno = "INSERT INTO alumnos (NIA, nombre, apellidos, genero, fecha_nacimiento, ciclo, curso, id_grupo) VALUES "
 							+ "('" + NIA + "', '" + nombre + "', '" + apellidos + "', '" + genero + "', '"
-							+ "1999-12-11" + "', '" + ciclo + "', '" + curso + "', '" + grupo + "')";
+							+ fecha + "', '" + ciclo + "', '" + curso + "', '" + grupo + "')";
 					
 					int filasAfectadas2 = sentencia.executeUpdate(sqlAlumno);
 					System.out.println("Filas afectadas: "+ filasAfectadas2);
-					
-					
+	
 				}
-				
-						
-				
+	
 			}
-			
-			
-			
+
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
