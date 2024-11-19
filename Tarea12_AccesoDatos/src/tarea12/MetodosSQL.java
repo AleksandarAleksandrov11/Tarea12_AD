@@ -8,12 +8,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -33,6 +35,13 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 import org.xml.sax.SAXException;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 public class MetodosSQL {
 
@@ -507,6 +516,145 @@ public class MetodosSQL {
 			}
 		}
 
+	}
+
+	public void guardarGruposEnJSON() {
+		Statement sentenciaAlumnos = null;
+		ResultSet resulAlumnos = null;
+		Grupo grupo;
+		ArrayList<Alumno> alumnos = null;
+		ArrayList<Grupo> grupos = new ArrayList<Grupo>();;
+		Gson gson = new GsonBuilder().setPrettyPrinting().setDateFormat("yyyy-MM-dd").create();
+
+		try(FileWriter writer = new FileWriter(new File("gruposGuardados.json"));) {
+			
+			
+			sentencia = conexion.createStatement();
+
+			String sql = "SELECT id_grupo, nombre_grupo FROM grupos";
+
+			resul = sentencia.executeQuery(sql);
+
+			while (resul.next()) {
+
+				sentenciaAlumnos = conexion.createStatement();
+				String sqlAlumnos = "SELECT NIA, nombre, apellidos, genero, fecha_nacimiento, ciclo, curso, id_grupo FROM alumnos "
+						+ "WHERE id_grupo = '" + resul.getInt("id_grupo") + "'";
+				resulAlumnos = sentenciaAlumnos.executeQuery(sqlAlumnos);
+				
+				alumnos = new ArrayList<Alumno>();
+						
+				while (resulAlumnos.next()) {
+					alumnos.add(new Alumno(resulAlumnos.getInt("NIA"), resulAlumnos.getString("nombre"), resulAlumnos.getString("apellidos"),
+							resulAlumnos.getString("genero").charAt(0), resulAlumnos.getDate("fecha_nacimiento"), resulAlumnos.getString("ciclo"),
+							resulAlumnos.getString("curso"), resulAlumnos.getInt("id_grupo")));
+				}
+				
+				grupo = new Grupo(resul.getInt("id_grupo"), resul.getString("nombre_grupo"), alumnos);
+				grupos.add(grupo);
+
+			}
+			
+			gson.toJson(grupos,writer);
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} finally {
+			try {
+				sentencia.close();
+				resul.close();
+				sentenciaAlumnos.close();
+				resulAlumnos.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+	}
+	
+	public void leerJsonInsertarBD() {
+		
+		Statement sentenciaAlumnos = null;		
+		
+		try(FileReader reader = new FileReader(new File("gruposLeer.json"));) {
+			
+			JsonElement jsonElement = JsonParser.parseReader(reader);
+			
+			JsonArray gruposArray = jsonElement.getAsJsonArray();
+			
+			for(JsonElement elementoGrupo : gruposArray) {
+				
+				JsonObject grupoObjeto = elementoGrupo.getAsJsonObject();
+				
+				int idGrupo = grupoObjeto.get("id_grupo").getAsInt();
+				String nombreGrupo = grupoObjeto.get("nombre_grupo").getAsString();
+				
+				sentencia = conexion.createStatement();
+				
+				String sql = "INSERT INTO grupos (id_grupo, nombre_grupo) VALUES ('"+idGrupo+"','"+nombreGrupo+"')";
+				
+				int filasAfectadas = sentencia.executeUpdate(sql);
+				System.out.println("Filas afectadas: "+ filasAfectadas);
+				
+				JsonArray alumnos = grupoObjeto.getAsJsonArray("alumnos");
+				
+				for(JsonElement alumno : alumnos) {
+					
+					JsonObject alumnoInsertar = alumno.getAsJsonObject();
+					
+					int NIA = alumnoInsertar.get("nia").getAsInt();
+					String nombre = alumnoInsertar.get("nombre").getAsString();
+					String apellidos = alumnoInsertar.get("apellidos").getAsString();
+					char genero = alumnoInsertar.get("genero").getAsString().charAt(0);
+					
+//				    String fechaNacimientoStr = alumnoInsertar.get("fNacimiento").getAsString();
+//				    SimpleDateFormat formatoFecha = new SimpleDateFormat("yyyy-MM-dd");
+//				    java.util.Date fechaNacimiento = formatoFecha.parse(fechaNacimientoStr);
+				    
+					String ciclo = alumnoInsertar.get("ciclo").getAsString();
+					String curso = alumnoInsertar.get("curso").getAsString();
+					int grupo = alumnoInsertar.get("grupo").getAsInt();
+					
+					sentenciaAlumnos = conexion.createStatement();
+					
+					String sqlAlumno = "INSERT INTO alumnos (NIA, nombre, apellidos, genero, fecha_nacimiento, ciclo, curso, id_grupo) VALUES "
+							+ "('" + NIA + "', '" + nombre + "', '" + apellidos + "', '" + genero + "', '"
+							+ "1999-12-11" + "', '" + ciclo + "', '" + curso + "', '" + grupo + "')";
+					
+					int filasAfectadas2 = sentencia.executeUpdate(sqlAlumno);
+					System.out.println("Filas afectadas: "+ filasAfectadas2);
+					
+					
+				}
+				
+						
+				
+			}
+			
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			try {
+				sentencia.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
 	}
 
 }

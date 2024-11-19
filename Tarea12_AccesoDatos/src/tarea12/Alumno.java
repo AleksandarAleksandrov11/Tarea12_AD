@@ -27,7 +27,6 @@ public class Alumno {
     private String curso;
     private int grupo;
 	
-
     /**
      * Constructor que inicializa todos los atributos del alumno.
      *
@@ -51,7 +50,7 @@ public class Alumno {
         this.genero = genero;
         this.fNacimiento = fNacimiento;
     }
-
+    
     /**
      * Constructor por defecto que crea un Alumno sin atributos.
      */

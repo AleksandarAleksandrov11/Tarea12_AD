@@ -44,6 +44,12 @@ public class MenuPrincipal {
                 case 10:
                     metodo.leerXmlInsertarBD();
                     break;
+                case 11:
+                    metodo.guardarGruposEnJSON();
+                    break;
+                case 12:
+                    metodo.leerJsonInsertarBD();
+                    break;
                 case 0:
                     System.out.println("Has salido");
                     metodo.cerrarConexion();
@@ -65,6 +71,8 @@ public class MenuPrincipal {
         System.out.println("8. Eliminar Alumnos de un Grupo");
         System.out.println("9. Guardar Grupos en archivo XML");
         System.out.println("10. Leer archivo XML e Insertar en BD");
+        System.out.println("11. Guardar Grupos en archivo JSON");
+        System.out.println("12. Leer archivo JSON e Insertar en BD");
         System.out.println("0. Salir");
         System.out.print("Elige una opción: ");
         System.out.println();

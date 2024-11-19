@@ -1,0 +1,128 @@
+[
+  {
+    "id_grupo": 1,
+    "nombre_grupo": "A",
+    "alumnos": [
+      {
+        "nia": 2,
+        "nombre": "Maria",
+        "apellidos": "Curie",
+        "genero": "M",
+        "fNacimiento": "2000-12-01",
+        "ciclo": "ASIR",
+        "curso": "1",
+        "grupo": 1
+      },
+      {
+        "nia": 4,
+        "nombre": "Carlos",
+        "apellidos": "Martinez",
+        "genero": "H",
+        "fNacimiento": "1998-02-16",
+        "ciclo": "DAM",
+        "curso": "2",
+        "grupo": 1
+      }
+    ]
+  },
+  {
+    "id_grupo": 2,
+    "nombre_grupo": "B",
+    "alumnos": [
+      {
+        "nia": 1,
+        "nombre": "Paco",
+        "apellidos": "Marciano",
+        "genero": "H",
+        "fNacimiento": "2000-12-15",
+        "ciclo": "DAM",
+        "curso": "2",
+        "grupo": 2
+      }
+    ]
+  },
+  {
+    "id_grupo": 3,
+    "nombre_grupo": "C",
+    "alumnos": [
+      {
+        "nia": 3,
+        "nombre": "Marcos",
+        "apellidos": "Garcia",
+        "genero": "H",
+        "fNacimiento": "2003-07-16",
+        "ciclo": "ASIR",
+        "curso": "2",
+        "grupo": 3
+      }
+    ]
+  },
+  {
+    "id_grupo": 4,
+    "nombre_grupo": "Alpha",
+    "alumnos": [
+      {
+        "nia": 12,
+        "nombre": "Juan",
+        "apellidos": "López",
+        "genero": "H",
+        "fNacimiento": "2001-03-12",
+        "ciclo": "DAW",
+        "curso": "1",
+        "grupo": 4
+      },
+      {
+        "nia": 13,
+        "nombre": "Ana",
+        "apellidos": "Fernández",
+        "genero": "M",
+        "fNacimiento": "2000-11-22",
+        "ciclo": "DAW",
+        "curso": "1",
+        "grupo": 4
+      }
+    ]
+  },
+  {
+    "id_grupo": 5,
+    "nombre_grupo": "Beta",
+    "alumnos": [
+      {
+        "nia": 21,
+        "nombre": "Lucía",
+        "apellidos": "Ramírez",
+        "genero": "M",
+        "fNacimiento": "1999-05-10",
+        "ciclo": "ASIR",
+        "curso": "2",
+        "grupo": 5
+      }
+    ]
+  },
+  {
+    "id_grupo": 6,
+    "nombre_grupo": "Gamma",
+    "alumnos": [
+      {
+        "nia": 31,
+        "nombre": "Pedro",
+        "apellidos": "Gómez",
+        "genero": "H",
+        "fNacimiento": "2002-07-18",
+        "ciclo": "DAM",
+        "curso": "2",
+        "grupo": 6
+      },
+      {
+        "nia": 32,
+        "nombre": "Clara",
+        "apellidos": "Ruiz",
+        "genero": "M",
+        "fNacimiento": "2003-09-24",
+        "ciclo": "DAM",
+        "curso": "2",
+        "grupo": 6
+      }
+    ]
+  }
+]
