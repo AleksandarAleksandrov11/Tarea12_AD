@@ -2,3 +2,17 @@
 2, Maria, Curie, M, 2000-12-01, ASIR, 1, 1, A
 3, Marcos, Garcia, H, 2003-07-16, ASIR, 2, 3, C
 4, Carlos, Martinez, H, 1998-02-16, DAM, 2, 1, A
+5, Sofía, López, M, 1999-12-11, DAM, 1, 1, A
+8, Andrés, Hernández, H, 1999-12-11, ASIR, 2, 1, A
+12, Juan, López, H, 2001-03-12, DAW, 1, 4, Alpha
+13, Ana, Fernández, M, 2000-11-22, DAW, 1, 4, Alpha
+15, Elena, Martínez, M, 1999-12-11, DAW, 1, 2, B
+16, Luis, García, H, 1999-12-11, ASIR, 2, 2, B
+21, Lucía, Ramírez, M, 1999-05-10, ASIR, 2, 5, Beta
+31, Pedro, Gómez, H, 2002-07-18, DAM, 2, 6, Gamma
+32, Clara, Ruiz, M, 2003-09-24, DAM, 2, 6, Gamma
+80, Luis, García, H, 2002-05-19, ASIR, 2, 2, B
+81, Elena, Martínez, M, 2000-01-08, DAW, 1, 2, B
+89, Andrés, Hernández, H, 1999-10-23, ASIR, 2, 1, A
+99, Sofía, López, M, 2001-06-12, DAM, 1, 1, A
+54545, Carlos, Paez, H, 1111-11-11, DAM, 2, 1, A

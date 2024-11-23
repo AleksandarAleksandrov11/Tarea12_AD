@@ -8,7 +8,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -79,10 +78,14 @@ public class MetodosSQL {
 
 		try {
 			sentencia = conexion.createStatement();
+			System.out.println("Dime el id del grupo a añadir");
+			int id = sc.nextInt();
+			
+			sc.nextLine();
 			System.out.println("Dime el nombre del grupo a añadir");
 			String nombreGrupo = sc.next();
 
-			String sql = "INSERT INTO grupos (nombre_grupo) VALUES ('" + nombreGrupo + "')";
+			String sql = "INSERT INTO grupos (id_grupo,nombre_grupo) VALUES ('"+id+"','" + nombreGrupo + "')";
 
 			int filasAfectadas = sentencia.executeUpdate(sql);
 			System.out.println("Filas afectadas: " + filasAfectadas);
@@ -90,10 +93,12 @@ public class MetodosSQL {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			try {
-				sentencia.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
+			if(sentencia!=null) {
+				try {
+					sentencia.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
 			}
 		}
 
@@ -122,10 +127,12 @@ public class MetodosSQL {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		} finally {
-			try {
-				sentencia.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
+			if(sentencia!=null) {
+				try {
+					sentencia.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
 			}
 		}
 
@@ -265,10 +272,12 @@ public class MetodosSQL {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			try {
-				sentencia.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
+			if(sentencia!=null) {
+				try {
+					sentencia.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
 			}
 		}
 
@@ -291,10 +300,12 @@ public class MetodosSQL {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			try {
-				sentencia.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
+			if(sentencia!=null) {
+				try {
+					sentencia.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
 			}
 		}
 
@@ -422,16 +433,12 @@ public class MetodosSQL {
 		} catch (ParserConfigurationException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (TransformerConfigurationException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (TransformerFactoryConfigurationError e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (TransformerException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			try {
@@ -497,16 +504,12 @@ public class MetodosSQL {
 			}
 
 		} catch (ParserConfigurationException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SAXException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			try {
@@ -560,7 +563,6 @@ public class MetodosSQL {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		} finally {
 			try {
@@ -569,7 +571,6 @@ public class MetodosSQL {
 				sentenciaAlumnos.close();
 				resulAlumnos.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -629,19 +630,15 @@ public class MetodosSQL {
 			}
 
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally {
 			try {
 				sentencia.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}

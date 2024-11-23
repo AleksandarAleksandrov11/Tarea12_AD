@@ -1,10 +1,10 @@
 [
     {
-      "id_grupo": 86,
+      "id_grupo": 434,
       "nombre_grupo": "Omega",
       "alumnos": [
         {
-          "nia": 99,
+          "nia": 434,
           "nombre": "Sofía",
           "apellidos": "López",
           "genero": "M",
@@ -14,7 +14,7 @@
           "grupo": 1
         },
         {
-          "nia": 89,
+          "nia": 444,
           "nombre": "Andrés",
           "apellidos": "Hernández",
           "genero": "H",
@@ -26,11 +26,11 @@
       ]
     },
     {
-      "id_grupo": 59,
+      "id_grupo": 454,
       "nombre_grupo": "Zeta",
       "alumnos": [
         {
-          "nia": 81,
+          "nia": 845,
           "nombre": "Elena",
           "apellidos": "Martínez",
           "genero": "M",
@@ -40,7 +40,7 @@
           "grupo": 2
         },
         {
-          "nia": 80,
+          "nia": 766,
           "nombre": "Luis",
           "apellidos": "García",
           "genero": "H",

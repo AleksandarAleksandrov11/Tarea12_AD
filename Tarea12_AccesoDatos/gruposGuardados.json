@@ -22,6 +22,46 @@
         "ciclo": "DAM",
         "curso": "2",
         "grupo": 1
+      },
+      {
+        "nia": 5,
+        "nombre": "Sofía",
+        "apellidos": "López",
+        "genero": "M",
+        "fNacimiento": "1999-12-11",
+        "ciclo": "DAM",
+        "curso": "1",
+        "grupo": 1
+      },
+      {
+        "nia": 8,
+        "nombre": "Andrés",
+        "apellidos": "Hernández",
+        "genero": "H",
+        "fNacimiento": "1999-12-11",
+        "ciclo": "ASIR",
+        "curso": "2",
+        "grupo": 1
+      },
+      {
+        "nia": 89,
+        "nombre": "Andrés",
+        "apellidos": "Hernández",
+        "genero": "H",
+        "fNacimiento": "1999-10-23",
+        "ciclo": "ASIR",
+        "curso": "2",
+        "grupo": 1
+      },
+      {
+        "nia": 99,
+        "nombre": "Sofía",
+        "apellidos": "López",
+        "genero": "M",
+        "fNacimiento": "2001-06-12",
+        "ciclo": "DAM",
+        "curso": "1",
+        "grupo": 1
       }
     ]
   },
@@ -38,24 +78,53 @@
         "ciclo": "DAM",
         "curso": "2",
         "grupo": 2
+      },
+      {
+        "nia": 15,
+        "nombre": "Elena",
+        "apellidos": "Martínez",
+        "genero": "M",
+        "fNacimiento": "1999-12-11",
+        "ciclo": "DAW",
+        "curso": "1",
+        "grupo": 2
+      },
+      {
+        "nia": 16,
+        "nombre": "Luis",
+        "apellidos": "García",
+        "genero": "H",
+        "fNacimiento": "1999-12-11",
+        "ciclo": "ASIR",
+        "curso": "2",
+        "grupo": 2
+      },
+      {
+        "nia": 80,
+        "nombre": "Luis",
+        "apellidos": "García",
+        "genero": "H",
+        "fNacimiento": "2002-05-19",
+        "ciclo": "ASIR",
+        "curso": "2",
+        "grupo": 2
+      },
+      {
+        "nia": 81,
+        "nombre": "Elena",
+        "apellidos": "Martínez",
+        "genero": "M",
+        "fNacimiento": "2000-01-08",
+        "ciclo": "DAW",
+        "curso": "1",
+        "grupo": 2
       }
     ]
   },
   {
     "id_grupo": 3,
     "nombre_grupo": "C",
-    "alumnos": [
-      {
-        "nia": 3,
-        "nombre": "Marcos",
-        "apellidos": "Garcia",
-        "genero": "H",
-        "fNacimiento": "2003-07-16",
-        "ciclo": "ASIR",
-        "curso": "2",
-        "grupo": 3
-      }
-    ]
+    "alumnos": []
   },
   {
     "id_grupo": 4,
@@ -124,5 +193,70 @@
         "grupo": 6
       }
     ]
+  },
+  {
+    "id_grupo": 44,
+    "nombre_grupo": "Omega",
+    "alumnos": []
+  },
+  {
+    "id_grupo": 48,
+    "nombre_grupo": "Omega",
+    "alumnos": []
+  },
+  {
+    "id_grupo": 57,
+    "nombre_grupo": "Zeta",
+    "alumnos": []
+  },
+  {
+    "id_grupo": 59,
+    "nombre_grupo": "Zeta",
+    "alumnos": []
+  },
+  {
+    "id_grupo": 80,
+    "nombre_grupo": "Omega",
+    "alumnos": []
+  },
+  {
+    "id_grupo": 81,
+    "nombre_grupo": "Omega",
+    "alumnos": []
+  },
+  {
+    "id_grupo": 82,
+    "nombre_grupo": "Omega",
+    "alumnos": []
+  },
+  {
+    "id_grupo": 83,
+    "nombre_grupo": "Omega",
+    "alumnos": []
+  },
+  {
+    "id_grupo": 84,
+    "nombre_grupo": "Omega",
+    "alumnos": []
+  },
+  {
+    "id_grupo": 85,
+    "nombre_grupo": "Omega",
+    "alumnos": []
+  },
+  {
+    "id_grupo": 86,
+    "nombre_grupo": "Omega",
+    "alumnos": []
+  },
+  {
+    "id_grupo": 999,
+    "nombre_grupo": "Pepe",
+    "alumnos": []
+  },
+  {
+    "id_grupo": 91919191,
+    "nombre_grupo": "PP",
+    "alumnos": []
   }
 ]
